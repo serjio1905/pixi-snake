@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    border: 3px solid black;
+    width: min-content;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gui {
+    background-color: #067581;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #FFF8F7;
+    font-size: 22px;
+    padding: 20px 0;
+}
+
+.gui__title {
+    color: #58D191;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+.gui__modes_wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gui__modes {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: #185655;
+    padding: 20px 10px;
+}
+
+.gui_score {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gui_score--row {
+    background-color: #085E6D;
+    padding: 5px 10px;
+}
+
+.gui__actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gui__button {
+    background-color: #23544F;
+    color: #FFF8F7;
+    padding: 20px 30px;
+    font-size: 22px;
+}

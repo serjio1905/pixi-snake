@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <div id="game"></div>
+        <div class="gui">
+            <h1 class="gui__title">Snake Game</h1>
+
+            <div class="gui_score">
+                <div class="gui_score--row">
+                    Best: <span id="best-score">0</span>
+                </div>
+                <div class="gui_score--row">
+                    Score: <span id="score">0</span>
+                </div>
+            </div>
+
+            <div class="gui__modes_wrapper">
+                <div class="gui__modes" id="game-modes">
+                    <label class="gui__mode">
+                        <input type="radio" name="mode" value="1" checked> Classic
+                    </label>
+                    <label class="gui__mode">
+                        <input type="radio" name="mode" value="2"> God mode
+                    </label>
+                    <label class="gui__mode">
+                        <input type="radio" name="mode" value="3"> Walls
+                    </label>
+                    <label class="gui__mode">
+                        <input type="radio" name="mode" value="4"> Portal
+                    </label>
+                    <label class="gui__mode">
+                        <input type="radio" name="mode" value="5"> Speed
+                    </label>
+                </div>
+            </div>
+
+            <div class="gui__actions">
+                <button class="gui__button" id="play-button">Play</button>
+                <button class="gui__button" id="exit-button">Exit</button>
+                <button class="gui__button" id="menu-button" style="display: none;">Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
