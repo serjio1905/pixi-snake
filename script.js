@@ -26,7 +26,8 @@ const SELECTORS = {
     },
     texts: {
         score: '#score',
-        bestScore: '#best-score'
+        bestScore: '#best-score',
+        gameOver: '#game-over',
     },
     modes: '#game-modes',
     game: '#game',
@@ -130,6 +131,7 @@ class Game {
         this.playButton.style.display = 'block';
         this.exitButton.style.display = 'block';
         document.querySelector(SELECTORS.modes).style.display = 'flex';
+        document.querySelector(SELECTORS.texts.gameOver).style.display = 'none';
         this.menuButton.style.display = 'none';
 
         this.app.ticker.remove(this.gameLoop);
@@ -187,8 +189,8 @@ class Game {
     }
 
     gameLoop() {
-        this.snake.move();
         if (this.fellOut() || this.bitten() || this.crashed()) return this.gameOver();
+        this.snake.move();
 
         const eatenFoot = this.ate();
         if (eatenFoot) {
@@ -222,8 +224,7 @@ class Game {
 
     gameOver() {
         this.app.ticker.remove(this.gameLoop);
-        alert('Game Over!');
-        this.showMenu();
+        document.querySelector(SELECTORS.texts.gameOver).style.display = 'block';
     }
 }
 
